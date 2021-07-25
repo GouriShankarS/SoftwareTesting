@@ -22,7 +22,7 @@ public class AmazonWebLinksCount {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\bharg\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver(options);    
 
 		// Launch Amazon Website
 		driver.get("https://www.amazon.co.uk/");
@@ -36,7 +36,7 @@ public class AmazonWebLinksCount {
 		WebElement footertable = driver.findElement(By.id("navFooter"));// Limiting webdriver scope
 
 		System.out.println(
-				"Total number of links in Amazon Footer tabledsfasdgfasdfgafdgafdgd:" + footertable.findElements(By.tagName("a")).size());
+				"Total number of links in Amazon Footer table:" + footertable.findElements(By.tagName("a")).size());
 
 		// Count total number of links on Amazon Home Page - Footer section third column/table
 		WebElement thirdcolumn = footertable
